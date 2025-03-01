@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>StreetFit | Promo</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body class="bg-gray-100">
+    <!-- Header -->
+    <div id="header"></div>
+    <!-- Credit and Search Section -->
+    <div class="container mx-auto p-4 text-center">
+      <div class="bg-gray-200 p-2 rounded-lg inline-block font-bold text-lg">
+        Credits : <span class="text-green-600">250 PT</span>
+      </div>
+      <p class="mt-2 font-bold text-gray-800">
+        "Accumulate points and enjoy exclusive discounts!"
+      </p>
+      <div class="mt-4">
+        <input
+          type="text"
+          placeholder="Search"
+          class="p-2 border rounded-lg w-1/3"
+        />
+        <button class="ml-2 px-4 py-2 bg-gray-500 text-white rounded-lg">
+          Search
+        </button>
+      </div>
+    </div>
+
+    <!-- Main Content -->
+    <div class="container mx-auto p-4">
+      <h1 class="text-center text-2xl font-bold text-gray-800">Promotions</h1>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mt-6">
+        <!-- Promo Cards -->
+        <div class="bg-white shadow-md rounded-lg p-4 text-center">
+          <img
+            src="assets/images/young-male-with-inscription-sign-torn-yellow-background-guy-shopping.jpg"
+            alt="Promo 30%"
+            class="mx-auto w-40 h-40"
+          />
+          <h2 class="font-bold text-lg mt-4">Exclusive Deal 🎉</h2>
+          <p class="text-gray-600 text-sm">
+            Get access to our best deals, available only for a short period!
+          </p>
+          <button class="mt-4 px-4 py-2 bg-green-500 text-white rounded-lg">
+            Buy Points
+          </button>
+        </div>
+        <div class="bg-white shadow-md rounded-lg p-4 text-center">
+          <img
+            src="assets/images/front-view-young-male-holding-writing-yellow-background.jpg"
+            alt="Promo 50%"
+            class="mx-auto w-40 h-40"
+          />
+          <h2 class="font-bold text-lg mt-4">Hot Deal 🔥</h2>
+          <p class="text-gray-600 text-sm">
+            Don't miss out on this hot deal! Shop now and save big.
+          </p>
+          <button class="mt-4 px-4 py-2 bg-green-500 text-white rounded-lg">
+            Buy Points
+          </button>
+        </div>
+        <div class="bg-white shadow-md rounded-lg p-4 text-center">
+          <img
+            src="assets/images/young-male-with-inscription-sign-torn-yellow-surface-sale-shopping-indoor-guy.jpg"
+            alt="Promo 50%"
+            class="mx-auto w-40 h-40"
+          />
+          <h2 class="font-bold text-lg mt-4">Flash Sale ⚡</h2>
+          <p class="text-gray-600 text-sm">
+            Limited time flash sale! Save up to 50% on select items.
+          </p>
+          <button class="mt-4 px-4 py-2 bg-green-500 text-white rounded-lg">
+            Buy Points
+          </button>
+        </div>
+      </div>
+
+      <div class="text-center mt-6">
+        <button class="px-6 py-3 bg-red-500 text-white rounded-lg font-bold">
+          View All Promo
+        </button>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <div id="footer"></div>
+  </body>
+</html>
+
+<script>
+  fetch("header.html")
+    .then((response) => response.text())
+    .then((data) => (document.getElementById("header").innerHTML = data));
+
+  fetch("footer.html")
+    .then((response) => response.text())
+    .then((data) => (document.getElementById("footer").innerHTML = data));
+</script>

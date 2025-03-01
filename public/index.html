@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>StreetFit | Promo</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body class="bg-gray-100">
+    <!-- Header -->
+    <div id="header"></div>
+
+    <div class="container mx-auto p-4 flex">
+      <!-- Sidebar -->
+      <aside
+        class="w-1/4 bg-gradient-to-b from-gray-200 to-gray-100 p-4 shadow-lg rounded-lg"
+      >
+        <ul class="space-y-4">
+          <li
+            class="flex items-center space-x-2 text-gray-700 font-semibold hover:text-green-700 cursor-pointer"
+          >
+            <span>👗</span> <span>Woman’s Fashion</span>
+          </li>
+          <li
+            class="flex items-center space-x-2 text-gray-700 font-semibold hover:text-green-700 cursor-pointer"
+          >
+            <span>👕</span> <span>Men’s Fashion</span>
+          </li>
+          <li
+            class="flex items-center space-x-2 text-gray-700 font-semibold hover:text-green-700 cursor-pointer"
+          >
+            <span>🏠</span> <span>Home & Lifestyle</span>
+          </li>
+          <li
+            class="flex items-center space-x-2 text-gray-700 font-semibold hover:text-green-700 cursor-pointer"
+          >
+            <span>🏋️</span> <span>Sports & Outdoor</span>
+          </li>
+          <li
+            class="flex items-center space-x-2 text-gray-700 font-semibold hover:text-green-700 cursor-pointer"
+          >
+            <span>🧸</span> <span>Baby’s & Toys</span>
+          </li>
+          <li
+            class="flex items-center space-x-2 text-gray-700 font-semibold hover:text-green-700 cursor-pointer"
+          >
+            <span>🎉</span> <span>Promotions</span>
+          </li>
+        </ul>
+      </aside>
+
+      <!-- Contenu principal -->
+      <main class="w-3/4 p-4">
+        <!-- Promo Section -->
+        <div class="text-center">
+          <img
+            src="assets/images/loterie-chance-roue-fortune-design_1017-25642.png"
+            alt="Spin the Wheel"
+            class="mx-auto w-48"
+          />
+          <div class="mt-4">
+            <button
+              class="bg-gray-300 px-4 py-2 rounded-md text-green-700 font-semibold"
+            >
+              Spin The Wheel
+            </button>
+            <button onclick="window.location.href='buyPoint.html'"
+              class="bg-gray-300 px-4 py-2 rounded-md text-green-700 font-semibold ml-4"
+            >
+              Buy Points
+            </button>
+          </div>
+        </div>
+
+        <!-- Top Winners -->
+        <div class="mt-8">
+          <h2 class="text-center text-xl font-bold text-green-700">
+            TOP WINNERS
+          </h2>
+          <div class="mt-4 space-y-4">
+            <div class="bg-blue-100 p-4 rounded-md flex items-center">
+              <img
+                src="assets/images/vector-users-icon.jpg"
+                alt="Ali Mouhamed"
+                class="w-10 h-10 rounded-full mr-4"
+              />
+              <span class="flex-1 font-semibold">Ali Mouhamed</span>
+              <span class="font-bold">1x PROMO CODE -20%</span>
+            </div>
+            <div class="bg-blue-100 p-4 rounded-md flex items-center">
+              <img
+                src="assets/images/vector-users-icon.jpg"
+                alt="Anas Betouzia"
+                class="w-10 h-10 rounded-full mr-4"
+              />
+              <span class="flex-1 font-semibold">Anas Betouzia</span>
+              <span class="font-bold">1x PROMO CODE -30%</span>
+            </div>
+            <div class="bg-blue-100 p-4 rounded-md flex items-center">
+              <img
+                src="assets/images/vector-users-icon.jpg"
+                alt="Rajesh Kumar"
+                class="w-10 h-10 rounded-full mr-4"
+              />
+              <span class="flex-1 font-semibold">Rajesh Kumar</span>
+              <span class="font-bold">1x PROMO CODE -50%</span>
+            </div>
+          </div>
+        </div>
+      </main>
+    </div>
+
+    <!-- Footer -->
+    <div id="footer"></div>
+  </body>
+</html>
+
+<script>
+  fetch("header.html")
+    .then((response) => response.text())
+    .then((data) => (document.getElementById("header").innerHTML = data));
+
+  fetch("footer.html")
+    .then((response) => response.text())
+    .then((data) => (document.getElementById("footer").innerHTML = data));
+</script>

@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>StreetFit | Checkout</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body class="bg-gray-100">
+    <!-- Header -->
+    <div id="header"></div>
+
+    <!-- Checkout Section -->
+    <div class="container mx-auto p-6">
+      <h1 class="text-3xl font-bold text-center mb-6">CHECKOUT</h1>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <!-- Information Form -->
+        <div class="bg-white p-6 shadow-md rounded-lg">
+          <h2 class="font-semibold text-xl mb-4">INFORMATION</h2>
+          <form>
+            <div class="mb-4">
+              <label class="block text-gray-700">Email</label>
+              <input type="email" class="w-full p-2 border rounded-lg" />
+            </div>
+            <div class="mb-4">
+              <label class="block text-gray-700">Phone</label>
+              <input type="tel" class="w-full p-2 border rounded-lg" />
+            </div>
+            <h2 class="font-semibold text-xl mt-6 mb-4">SHIPPING ADDRESS</h2>
+            <div class="grid grid-cols-2 gap-4">
+              <input
+                type="text"
+                placeholder="First Name"
+                class="w-full p-2 border rounded-lg"
+              />
+              <input
+                type="text"
+                placeholder="Last Name"
+                class="w-full p-2 border rounded-lg"
+              />
+            </div>
+            <div class="mt-4">
+              <input
+                type="text"
+                placeholder="Country"
+                class="w-full p-2 border rounded-lg mb-4"
+              />
+              <input
+                type="text"
+                placeholder="State / Region"
+                class="w-full p-2 border rounded-lg mb-4"
+              />
+              <input
+                type="text"
+                placeholder="Address"
+                class="w-full p-2 border rounded-lg mb-4"
+              />
+              <div class="grid grid-cols-2 gap-4">
+                <input
+                  type="text"
+                  placeholder="City"
+                  class="w-full p-2 border rounded-lg"
+                />
+                <input
+                  type="text"
+                  placeholder="Postal Code"
+                  class="w-full p-2 border rounded-lg"
+                />
+              </div>
+            </div>
+          </form>
+        </div>
+
+        <!-- Order Summary -->
+        <div class="bg-white p-6 shadow-md rounded-lg">
+          <h2 class="font-semibold text-xl mb-4">YOUR ORDER</h2>
+          <div class="mb-4 flex items-center">
+            <img
+              src="assets/images/img3.jpg"
+              alt="Product 1"
+              class="w-16 h-16 mr-4"
+            />
+            <div>
+              <p class="text-gray-700">Basic Heavy T-Shirt</p>
+              <p class="text-gray-500">Black / L</p>
+              <p class="text-gray-700 font-bold">90DT</p>
+            </div>
+          </div>
+          <div class="mb-4 flex items-center">
+            <img
+              src="assets/images/img4.jpg"
+              alt="Product 2"
+              class="w-16 h-16 mr-4"
+            />
+            <div>
+              <p class="text-gray-700">Basic Fit T-Shirt</p>
+              <p class="text-gray-500">Black / L</p>
+              <p class="text-gray-700 font-bold">90DT</p>
+            </div>
+          </div>
+          <hr class="my-4" />
+          <p class="text-gray-700">
+            Subtotal: <span class="font-bold">180.00DT</span>
+          </p>
+          <p class="text-gray-500 text-sm">Shipping: CALCULATED AT NEXT STEP</p>
+          <p class="text-lg font-bold mt-4">Total: 180.00DT</p>
+          <button
+            class="mt-6 w-full bg-yellow-500 text-white p-3 rounded-lg font-bold flex justify-between items-center"
+          >
+            Shipping <span>&rarr;</span>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <div id="footer"></div>
+  </body>
+</html>
+
+<script>
+  fetch("header.html")
+    .then((response) => response.text())
+    .then((data) => (document.getElementById("header").innerHTML = data));
+
+  fetch("footer.html")
+    .then((response) => response.text())
+    .then((data) => (document.getElementById("footer").innerHTML = data));
+</script>
