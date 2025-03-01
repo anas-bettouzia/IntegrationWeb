@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cart | StreetFit</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100">
+    <!-- Header -->
+    <div id="header"></div>
+
+    <main class="container mx-auto p-6">
+        <h2 class="text-2xl font-semibold">Shopping Bag</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-10 mt-6">
+            <!-- Section des produits -->
+            <div class="space-y-6">
+                <div class="flex border-b pb-4">
+                    <img src="assets/images/img1.jpg" alt="T-Shirt" class="w-24 h-24 object-cover">
+                    <div class="ml-4 flex-1">
+                        <h3 class="text-lg font-semibold">Cotton T-Shirt</h3>
+                        <p class="text-gray-500">T-Shirt Basic Slim Fit - L - Beige</p>
+                        <p class="text-gray-700 font-bold">80DT</p>
+                        <div class="flex items-center mt-2">
+                            <button class="border px-2 py-1">-</button>
+                            <span class="px-4">1</span>
+                            <button class="border px-2 py-1">+</button>
+                        </div>
+                    </div>
+                    <button class="text-red-500">✖</button>
+                </div>
+
+                <div class="flex border-b pb-4">
+                    <img src="assets/images/img2.jpg" alt="T-Shirt" class="w-24 h-24 object-cover">
+                    <div class="ml-4 flex-1">
+                        <h3 class="text-lg font-semibold">Cotton T-Shirt</h3>
+                        <p class="text-gray-500">T-Shirt Heavy Weight - L - blue marine</p>
+                        <p class="text-gray-700 font-bold">100DT</p>
+                        <div class="flex items-center mt-2">
+                            <button class="border px-2 py-1">-</button>
+                            <span class="px-4">1</span>
+                            <button class="border px-2 py-1">+</button>
+                        </div>
+                    </div>
+                    <button class="text-red-500">✖</button>
+                </div>
+            </div>
+
+            <div class="bg-white p-6 shadow rounded-lg">
+                <h3 class="text-lg font-semibold">Order Summary</h3>
+                <div class="flex justify-between mt-4">
+                    <span>Subtotal</span>
+                    <span>180DT</span>
+                </div>
+                <div class="flex justify-between mt-2">
+                    <span>Shipping</span>
+                    <span>10DT</span>
+                </div>
+                <div class="border-t mt-4 pt-4 flex justify-between font-bold">
+                    <span>Total (TAX INCL.)</span>
+                    <span>190DT</span>
+                </div>
+                <div class="mt-4">
+                    <input type="checkbox" id="terms" class="mr-2">
+                    <label for="terms" class="text-sm">I agree to the terms and conditions</label>
+                </div>
+                <button id="continue-btn" class="w-full bg-gray-400 text-white py-3 mt-6 rounded-lg cursor-not-allowed" disabled>
+                    CONTINUE
+                </button>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <div id="footer"></div>
+
+    <script>
+        fetch('header.html')
+            .then(response => response.text())
+            .then(data => document.getElementById('header').innerHTML = data);
+
+        fetch('footer.html')
+            .then(response => response.text())
+            .then(data => document.getElementById('footer').innerHTML = data);
+        
+        // Activer si la case est cochée
+        document.getElementById('terms').addEventListener('change', function() {
+            const continueBtn = document.getElementById('continue-btn');
+            if (this.checked) {
+                continueBtn.classList.remove('bg-gray-400', 'cursor-not-allowed');
+                continueBtn.classList.add('bg-green-500', 'hover:bg-green-600');
+                continueBtn.removeAttribute('disabled');
+            } else {
+                continueBtn.classList.add('bg-gray-400', 'cursor-not-allowed');
+                continueBtn.classList.remove('bg-green-500', 'hover:bg-green-600');
+                continueBtn.setAttribute('disabled', 'true');
+            }
+        });
+    </script>
+</body>
+</html>
