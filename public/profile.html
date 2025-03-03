@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile Page</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100">
+    <div id="header"></div>
+    
+    <main class="max-w-6xl mx-auto mt-8 flex">
+        <aside class="w-1/4 bg-white p-6 rounded-lg shadow-lg">
+            <div class="flex items-center space-x-4">
+                <img src="https://cdn.pixabay.com/photo/2017/02/23/13/05/avatar-2092113_640.png" alt="Profile" class="rounded-full w-12 h-12">
+                <div>
+                    <p class="font-bold">Mahdi Kalfat</p>
+                    <p class="text-sm text-gray-500">Hello 👋</p>
+                </div>
+            </div>
+            <nav class="mt-6 space-y-4">
+                <a href="profile.html" class="block p-2 bg-black text-white rounded-lg">Personal Information</a>
+                <a href="index.html" class="block p-2 text-gray-700">My Orders</a>
+                <a href="#" class="block p-2 text-gray-700">My Wishlists</a>
+                <a href="#" class="block p-2 text-gray-700">Manage Addresses</a>
+                <a href="#" class="block p-2 text-gray-700">Saved Cards</a>
+                <a href="notification.html" class="block p-2 text-gray-700">Notifications</a>
+                <a href="#" class="block p-2 text-gray-700">Settings</a>
+            </nav>
+        </aside>
+        
+        <section class="w-3/4 bg-white p-6 rounded-lg shadow-lg ml-6">
+            <h2 class="text-2xl font-bold mb-4">My Profile</h2>
+            <div class="grid grid-cols-2 gap-4">
+                <div>
+                    <label class="block text-gray-700">First Name</label>
+                    <input type="text" value="Mahdi" class="w-full p-2 border rounded-lg">
+                </div>
+                <div>
+                    <label class="block text-gray-700">Last Name</label>
+                    <input type="text" value="Kalfat" class="w-full p-2 border rounded-lg">
+                </div>
+                <div>
+                    <label class="block text-gray-700">Phone Number</label>
+                    <input type="text" value="(252) 555-0126" class="w-full p-2 border rounded-lg">
+                </div>
+                <div>
+                    <label class="block text-gray-700">Email Address</label>
+                    <input type="text" value="MahdiKalfat@example.com" class="w-full p-2 border rounded-lg">
+                </div>
+                <div class="col-span-2">
+                    <label class="block text-gray-700">Address</label>
+                    <input type="text" value="2464 Royal Ln. Mesa, New Jersey 45463" class="w-full p-2 border rounded-lg">
+                </div>
+            </div>
+            <button class="mt-4 bg-gray-400 text-white py-2 px-6 rounded-lg">Edit Profile</button>
+        </section>
+
+        
+    </main>
+    <div id="footer"></div>
+</body>
+</html>
+<script>
+    fetch('header.html')
+        .then(response => response.text())
+        .then(data => document.getElementById('header').innerHTML = data);
+
+    fetch('footer.html')
+        .then(response => response.text())
+        .then(data => document.getElementById('footer').innerHTML = data);
+</script>

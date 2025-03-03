@@ -1,0 +1,14 @@
+{
+  "name": "mahdikalfat4twin5",
+  "version": "1.0.0",
+  "main": "tailwind.config.js",
+"scripts": {
+  "build": "npx tailwindcss -i ./src/input.css -o ./public/style.css --watch",
+  "serve": "npx serve public"
+},
+  
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": ""
+}
